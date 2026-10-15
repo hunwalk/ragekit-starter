@@ -47,7 +47,7 @@ Next steps: RageKit's guides on [getting started](https://github.com/hunwalk/rag
 
 ## License
 
-The files of this starter are free to use without conditions (MIT-0). What you may do with the
-app you build depends on what goes into it: RageKit, PHP's runtime and Slint. Read RageKit's
-[licensing notes](https://github.com/hunwalk/ragekit/blob/master/THIRD_PARTY_NOTICES.md) before
-you distribute it.
+The files of this starter are free to use without conditions (MIT-0). The app you build contains
+RageKit's runtime, which is GPLv3, so if you distribute the app it must be GPLv3 too (with its
+source). It also contains PHP's runtime and Slint; see RageKit's
+[licensing notes](https://github.com/hunwalk/ragekit/blob/master/THIRD_PARTY_NOTICES.md).
