@@ -1,0 +1,4 @@
+/vendor/
+/build/
+# The toolchain `ragekit setup` installs (TypePHP, Slint)
+/.ragekit/

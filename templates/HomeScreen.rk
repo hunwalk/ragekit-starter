@@ -1,0 +1,12 @@
+<VStack>
+    <Label text="Hello from RageKit" size="title" />
+    <Card title="Counter">
+        <Label text="Clicked {count} times" />
+        <HStack>
+            <Button text="Click me" onClick="increment" grow="true" />
+            <Button text="Reset" variant="outline" onClick="reset" />
+        </HStack>
+    </Card>
+    <Entry value="{name}" />
+    <Label text="{greeting}" />
+</VStack>
