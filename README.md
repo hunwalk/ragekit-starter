@@ -9,8 +9,12 @@ PHP 8.4+, Composer, git, tar and a C++ compiler. On Debian or Ubuntu:
 
 ```sh
 sudo apt install php8.4-cli composer git build-essential \
-    libfontconfig1 libfreetype6 libxkbcommon0 libinput10 libgbm1 libudev1
+    libfontconfig1 libfreetype6 libxkbcommon0 libinput10 libgbm1 libudev1 \
+    php8.4-dev libphp8.4-embed cmake libgmp-dev libmpfr-dev
 ```
+
+The last line is optional: without it the first normal build compiles a private PHP (~10 minutes,
+once). `composer build -- --nano` needs neither.
 
 Windows: Visual Studio 2022 Build Tools ("Desktop development with C++") and 7-Zip. macOS isn't
 supported yet.
