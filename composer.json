@@ -4,7 +4,7 @@
     "type": "project",
     "require": {
         "php": ">=8.4",
-        "ragekit/ragekit": "^0.1@dev"
+        "ragekit/ragekit": "^0.1"
     },
     "autoload": {
         "psr-4": {
