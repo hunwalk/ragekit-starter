@@ -4,7 +4,7 @@
     "type": "project",
     "require": {
         "php": ">=8.4",
-        "ragekit/ragekit": "^0.1"
+        "ragekit/ragekit": "^0.1.2"
     },
     "autoload": {
         "psr-4": {
@@ -13,6 +13,7 @@
     },
     "scripts": {
         "post-create-project-cmd": [
+            "RageKit\\Cli\\Composer\\Hooks::offerBuildTools",
             "@php vendor/bin/ragekit setup"
         ],
         "build": "ragekit build",

@@ -16,8 +16,10 @@ sudo apt install php8.4-cli composer git build-essential \
 The last line is optional: without it the first normal build compiles a private PHP (~10 minutes,
 once). `composer build -- --nano` needs neither.
 
-Windows: Visual Studio 2022 Build Tools ("Desktop development with C++") and 7-Zip. macOS isn't
-supported yet.
+Windows: Visual Studio 2022 Build Tools ("Desktop development with C++") and 7-Zip. When the Build
+Tools are missing, `composer create-project` offers to install them (or run
+`powershell -ExecutionPolicy Bypass -File vendor\ragekit\ragekit\install-build-tools.ps1`).
+macOS isn't supported yet.
 
 ## Run it
 
