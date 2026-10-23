@@ -41,13 +41,16 @@ vendor/bin/ragekit doctor
 
 | Path | What it is |
 |---|---|
-| `main.php` | `main()`: opens the first window |
+| `main.php` | `main()`: runs the app |
+| `src/MyApp.php` | the app: its store, its first screen, the main window's title and size |
+| `src/AppStore.php`, `src/Profile.php` | app-wide state: templates read it as `$store->profile->name` |
 | `src/HomeScreen.php` | the screen's state (public properties) and event handlers (public methods) |
 | `templates/HomeScreen.rk` | what the window looks like |
 | `project.yml` | build settings: kit (`shadcn` or `material`), renderer, modules, `nano: true` |
 
 Next steps: RageKit's guides on [getting started](https://github.com/hunwalk/ragekit/blob/master/docs/getting-started.md),
 [templates](https://github.com/hunwalk/ragekit/blob/master/docs/templates.md),
+[state](https://github.com/hunwalk/ragekit/blob/master/docs/state.md),
 [kits](https://github.com/hunwalk/ragekit/blob/master/docs/kits.md) and
 [dev mode](https://github.com/hunwalk/ragekit/blob/master/docs/dev-mode.md).
 

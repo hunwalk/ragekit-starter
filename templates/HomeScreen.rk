@@ -1,12 +1,12 @@
 <VStack>
     <Label text="Hello from RageKit" size="title" />
     <Card title="Counter">
-        <Label text="Clicked {count} times" />
+        <Label text="Clicked {{ times() }}" />
         <HStack>
             <Button text="Click me" onClick="increment" grow="true" />
             <Button text="Reset" variant="outline" onClick="reset" />
         </HStack>
     </Card>
-    <Entry value="{name}" />
-    <Label text="{greeting}" />
+    <Entry value="{{ $store->profile->name }}" />
+    <Label text="{{ $store->profile->greeting() }}" />
 </VStack>

@@ -11,17 +11,16 @@ use RageKit\Screen;
 final class HomeScreen extends Screen
 {
     public int $count = 0;
-    public string $name = '';
 
     public static function template(): string
     {
         return 'templates/HomeScreen.rk';
     }
 
-    /** Computed values are methods too: the template reads them like properties. */
-    public function greeting(): string
+    /** Computed values are methods too: the template calls them, e.g. {{ times() }}. */
+    public function times(): string
     {
-        return $this->name === '' ? 'Type your name above' : 'Hello, ' . $this->name . '!';
+        return $this->count === 1 ? 'once' : $this->count . ' times';
     }
 
     public function increment(): void
