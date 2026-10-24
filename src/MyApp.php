@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Assets\Images;
 use App\Screens\HomeScreen;
 use App\Stores\AppStore;
 use RageKit\RootStore;
@@ -17,6 +18,12 @@ final class MyApp extends \RageKit\App
     protected function createStore(): RootStore
     {
         return new AppStore();
+    }
+
+    /** Image groups templates show as $assets->images->logo. */
+    protected function assets(): array
+    {
+        return ['images' => Images::class];
     }
 
     protected function firstScreen(): Screen

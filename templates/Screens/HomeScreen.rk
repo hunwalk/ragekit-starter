@@ -1,5 +1,8 @@
 <VStack>
-    <Label text="Hello from RageKit" size="title" />
+    <HStack>
+        <Image source="{{ $assets->images->logo }}" width="32" height="32" />
+        <Label text="Hello from RageKit" size="title" />
+    </HStack>
     <Card title="Counter">
         <Label text="Clicked {{ times() }}" />
         <HStack>

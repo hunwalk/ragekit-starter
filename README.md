@@ -49,6 +49,8 @@ vendor/bin/ragekit doctor
 | `src/Stores/` | app-wide state: `AppStore` and its stores (`$store->profile->name` in templates) |
 | `src/Flows/` | flows: one user action step by step (update a store, call a service, store the result) |
 | `src/Services/` | outside calls, e.g. an API client |
+| `src/Assets/` | the app's images (`Images::LOGO`), registered in `MyApp::assets()`; templates show `$assets->images->logo` |
+| `assets/` | the image files |
 | `templates/` | what things look like: `templates/Screens/HomeScreen.rk` belongs to `src/Screens/HomeScreen.php` |
 | `project.yml` | build settings: kit (`shadcn` or `material`), renderer, modules, `nano: true` |
 
@@ -61,6 +63,7 @@ vendor/bin/ragekit make:component UserBadge # src/Components/UserBadge.php + its
 vendor/bin/ragekit make:store Session      # src/Stores/Session.php, added to AppStore
 vendor/bin/ragekit make:service GithubApi  # src/Services/GithubApi.php
 vendor/bin/ragekit make:flow LoadUser      # src/Flows/LoadUser.php
+vendor/bin/ragekit make:assets Icons       # src/Assets/Icons.php: register it in MyApp::assets()
 vendor/bin/ragekit stub:publish            # copy the templates make: uses into stubs/ to change them
 ```
 
