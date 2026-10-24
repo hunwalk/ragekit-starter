@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Screens\HomeScreen;
+use App\Stores\AppStore;
 use RageKit\RootStore;
 use RageKit\Screen;
 

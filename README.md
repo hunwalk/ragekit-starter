@@ -43,14 +43,31 @@ vendor/bin/ragekit doctor
 |---|---|
 | `main.php` | `main()`: runs the app |
 | `src/MyApp.php` | the app: its store, its first screen, the main window's title and size |
-| `src/AppStore.php`, `src/Profile.php` | app-wide state: templates read it as `$store->profile->name` |
-| `src/HomeScreen.php` | the screen's state (public properties) and event handlers (public methods) |
-| `templates/HomeScreen.rk` | what the window looks like |
+| `src/Screens/` | screens: state (public properties) and event handlers (public methods) |
+| `src/Components/` | child components other templates use as `<Name />` |
+| `src/Windows/` | windows with their own title bar |
+| `src/Stores/` | app-wide state: `AppStore` and its stores (`$store->profile->name` in templates) |
+| `src/Flows/` | flows: one user action step by step (update a store, call a service, store the result) |
+| `src/Services/` | outside calls, e.g. an API client |
+| `templates/` | what things look like: `templates/Screens/HomeScreen.rk` belongs to `src/Screens/HomeScreen.php` |
 | `project.yml` | build settings: kit (`shadcn` or `material`), renderer, modules, `nano: true` |
+
+## Making new pieces
+
+```sh
+vendor/bin/ragekit make:screen Login       # src/Screens/LoginScreen.php + templates/Screens/LoginScreen.rk
+vendor/bin/ragekit make:window App         # src/Windows/AppWindow.php + its template (your own title bar)
+vendor/bin/ragekit make:component UserBadge # src/Components/UserBadge.php + its template
+vendor/bin/ragekit make:store Session      # src/Stores/Session.php, added to AppStore
+vendor/bin/ragekit make:service GithubApi  # src/Services/GithubApi.php
+vendor/bin/ragekit make:flow LoadUser      # src/Flows/LoadUser.php
+vendor/bin/ragekit stub:publish            # copy the templates make: uses into stubs/ to change them
+```
 
 Next steps: RageKit's guides on [getting started](https://github.com/hunwalk/ragekit/blob/master/docs/getting-started.md),
 [templates](https://github.com/hunwalk/ragekit/blob/master/docs/templates.md),
 [state](https://github.com/hunwalk/ragekit/blob/master/docs/state.md),
+[make](https://github.com/hunwalk/ragekit/blob/master/docs/make.md),
 [kits](https://github.com/hunwalk/ragekit/blob/master/docs/kits.md) and
 [dev mode](https://github.com/hunwalk/ragekit/blob/master/docs/dev-mode.md).
 

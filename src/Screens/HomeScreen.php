@@ -1,21 +1,17 @@
 <?php
 
-namespace App;
+namespace App\Screens;
 
 use RageKit\Screen;
 
 /**
  * A screen: public properties are its state, public methods its event handlers. After every
- * event the window shows the new values.
+ * event the window shows the new values. Its template is templates/Screens/HomeScreen.rk (the
+ * same path as this file under src/).
  */
 final class HomeScreen extends Screen
 {
     public int $count = 0;
-
-    public static function template(): string
-    {
-        return 'templates/HomeScreen.rk';
-    }
 
     /** Computed values are methods too: the template calls them, e.g. {{ times() }}. */
     public function times(): string
