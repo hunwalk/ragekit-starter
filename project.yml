@@ -8,3 +8,4 @@ ragekit:
   backend: slint
   kit: shadcn          # or material
   renderer: software   # software (smallest, default), femtovg or skia (GPU)
+  icon: assets/images/logo.svg   # the app's icon (png or svg; RageKit 0.7+; Windows' .exe icon needs a png)
