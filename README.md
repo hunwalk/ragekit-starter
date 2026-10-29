@@ -1,6 +1,6 @@
 # My RageKit app
 
-A desktop app written in PHP with [RageKit](https://github.com/hunwalk/ragekit): the PHP is
+A desktop app written in PHP with [RageKit](https://github.com/ragekit-php/ragekit): the PHP is
 compiled to native code by TypePHP, and the UI is drawn by Slint (no browser engine).
 
 ## Requirements
@@ -67,16 +67,16 @@ vendor/bin/ragekit make:assets Icons       # src/Assets/Icons.php: register it i
 vendor/bin/ragekit stub:publish            # copy the templates make: uses into stubs/ to change them
 ```
 
-Next steps: RageKit's guides on [getting started](https://github.com/hunwalk/ragekit/blob/master/docs/getting-started.md),
-[templates](https://github.com/hunwalk/ragekit/blob/master/docs/templates.md),
-[state](https://github.com/hunwalk/ragekit/blob/master/docs/state.md),
-[make](https://github.com/hunwalk/ragekit/blob/master/docs/make.md),
-[kits](https://github.com/hunwalk/ragekit/blob/master/docs/kits.md) and
-[dev mode](https://github.com/hunwalk/ragekit/blob/master/docs/dev-mode.md).
+Next steps: RageKit's guides on [getting started](https://github.com/ragekit-php/ragekit/blob/master/docs/getting-started.md),
+[templates](https://github.com/ragekit-php/ragekit/blob/master/docs/templates.md),
+[state](https://github.com/ragekit-php/ragekit/blob/master/docs/state.md),
+[make](https://github.com/ragekit-php/ragekit/blob/master/docs/make.md),
+[kits](https://github.com/ragekit-php/ragekit/blob/master/docs/kits.md) and
+[dev mode](https://github.com/ragekit-php/ragekit/blob/master/docs/dev-mode.md).
 
 ## License
 
 The files of this starter are free to use without conditions (MIT-0). The app you build contains
 RageKit's runtime, which is GPLv3, so if you distribute the app it must be GPLv3 too (with its
 source). It also contains PHP's runtime and Slint; see RageKit's
-[licensing notes](https://github.com/hunwalk/ragekit/blob/master/THIRD_PARTY_NOTICES.md).
+[licensing notes](https://github.com/ragekit-php/ragekit/blob/master/THIRD_PARTY_NOTICES.md).
